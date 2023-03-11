@@ -12,6 +12,8 @@ const UpdateBook = (req, handler) => {
     });
 
     response.code(404);
+
+    return response;
   }
 
   const { name, pageCount, readPage } = req.payload;
