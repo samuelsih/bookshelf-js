@@ -2,9 +2,12 @@
   "name": "submission",
   "version": "1.0.0",
   "description": "submission for Belajar Membuat Aplikasi Back-end Dengan GCP",
-  "main": "src/main.js",
+  "type": "module",
+  "main": "main.js",
   "scripts": {
-    "lint": "eslint ./"
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "start": "node main.js",
+    "dev": "nodemon main.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +19,10 @@
   "author": "Samuel <samuel.istnd@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.36.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.0",
+    "nanoid": "^4.0.1"
   }
 }
