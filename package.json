@@ -1,0 +1,23 @@
+{
+  "name": "submission",
+  "version": "1.0.0",
+  "description": "submission for Belajar Membuat Aplikasi Back-end Dengan GCP",
+  "main": "src/main.js",
+  "scripts": {
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/samuelsih/bookshelf-js"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Samuel <samuel.istnd@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
