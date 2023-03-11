@@ -1,8 +1,8 @@
-import CreateBook from '../handler/createBook';
-import GetAllBook from '../handler/getAllBooks';
-import GetBookByID from '../handler/getBookById';
-import UpdateBook from '../handler/updateBook';
-import DeleteBook from '../handler/deleteBook';
+import CreateBook from '../handler/createBook.js';
+import GetAllBook from '../handler/getAllBooks.js';
+import GetBookByID from '../handler/getBookById.js';
+import UpdateBook from '../handler/updateBook.js';
+import DeleteBook from '../handler/deleteBook.js';
 
 const router = [
   {
