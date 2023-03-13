@@ -18,7 +18,7 @@ const UpdateBook = (req, handler) => {
 
   const { name, pageCount, readPage } = req.payload;
 
-  const errorMsg = validatePayload(name, readPage, pageCount);
+  const errorMsg = validatePayload(name, readPage, pageCount, 'UPDATE');
   if (errorMsg) {
     const response = handler.response({
       status: 'fail',

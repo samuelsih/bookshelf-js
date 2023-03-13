@@ -14,7 +14,7 @@ const CreateBook = (req, handler) => {
     reading,
   } = req.payload;
 
-  const errorMsg = validatePayload(name, readPage, pageCount);
+  const errorMsg = validatePayload(name, readPage, pageCount, 'CREATE');
   if (errorMsg) {
     const response = handler.response({
       status: 'fail',

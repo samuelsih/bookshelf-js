@@ -1,26 +1,32 @@
 let books = [];
 
 export const getAll = (name, reading, finished) => {
-  let currentBooks = books;
+  let currentBooks = structuredClone(books);
 
   if (name !== undefined) {
-    currentBooks = currentBooks
-      .filter((book) => book.name.toLowerCase().includes(name.toLowerCase()));
+    currentBooks = currentBooks.filter((book) =>
+      book.name.toLowerCase().includes(name.toLowerCase())
+    );
   }
 
   if (reading !== undefined && !Number.isNaN(reading)) {
-    const currentReading = reading === 1;
+    const currentReading = reading === 1 ? true : false;
     currentBooks = currentBooks.filter(
-      (book) => book.reading === currentReading,
+      (book) => book.reading === currentReading
     );
   }
 
   if (finished !== undefined && !Number.isNaN(finished)) {
-    const currentFinished = finished === 1;
+    const currentFinished = finished === 1 ? true : false;
     currentBooks = currentBooks.filter(
-      (book) => book.finished === currentFinished,
+      (book) => book.finished === currentFinished
     );
   }
+
+  currentBooks = currentBooks.map((book) => {
+    const { id, name, publisher } = book;
+    return { id, name, publisher };
+  });
 
   return currentBooks;
 };
@@ -53,7 +59,7 @@ export const update = (
     reading,
     finished,
     updatedAt,
-  },
+  }
 ) => {
   books
     .filter((book) => book.id === id)

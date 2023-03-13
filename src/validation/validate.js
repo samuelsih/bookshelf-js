@@ -1,10 +1,14 @@
-const validatePayload = (name, readPage, readCount) => {
+const validatePayload = (name, readPage, readCount, mode) => {
   if (name === undefined || name === '') {
-    return 'Gagal menambahkan buku. Mohon isi nama buku';
+    return mode === 'CREATE'
+      ? 'Gagal menambahkan buku. Mohon isi nama buku'
+      : 'Gagal memperbarui buku. Mohon isi nama buku';
   }
 
   if (readPage > readCount) {
-    return 'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount';
+    return mode === 'CREATE'
+      ? 'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount'
+      : 'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount';
   }
 
   return '';
